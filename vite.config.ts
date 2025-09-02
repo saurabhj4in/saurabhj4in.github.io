@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+// User site (https://saurabhj4in.github.io) + publish from /docs
 export default defineConfig({
-  base: '/', // 👈 This is critical for GitHub Pages
+  base: '/',                 // ✅ root path for a user site
+  build: { outDir: 'docs' }, // ✅ GitHub Pages serves /docs on main
   plugins: [react()],
-});
+})
