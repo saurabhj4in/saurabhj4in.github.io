@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Code, Globe, Cloud } from 'lucide-react';
 
 const Skills = () => {

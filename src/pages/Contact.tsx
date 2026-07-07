@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { Mail, Send, CheckCircle, Github, Linkedin, Twitter, ExternalLink } from 'lucide-react';
 
 const Contact = () => {
@@ -10,14 +10,14 @@ const Contact = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // Simulate form submission
     setIsSubmitted(true);
@@ -36,7 +36,7 @@ const Contact = () => {
     },
     {
       name: 'GitHub',
-      url: 'https://github.com/jain6196',
+      url: 'https://github.com/saurabhj4in',
       icon: Github,
       color: 'hover:text-gray-900 dark:hover:text-white'
     },

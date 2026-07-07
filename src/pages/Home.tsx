@@ -1,11 +1,8 @@
-import React from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Certifications from '../components/Certifications';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
-import SecuredCompanies from '../components/SecuredCompanies';
-
 
 const Home = () => {
   return (
@@ -15,8 +12,6 @@ const Home = () => {
       <Certifications />
       <Skills />
       <Experience />
-      <>Blog</>
-      <>Contact Us</>
     </>
   );
 };

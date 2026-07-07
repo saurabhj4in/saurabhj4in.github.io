@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface CountUpProps {
   end: number;
@@ -7,12 +7,12 @@ interface CountUpProps {
   prefix?: string;
 }
 
-const CountUp: React.FC<CountUpProps> = ({ 
-  end, 
-  duration = 2000, 
-  suffix = '', 
-  prefix = '' 
-}) => {
+const CountUp = ({
+  end,
+  duration = 2000,
+  suffix = '',
+  prefix = ''
+}: CountUpProps) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLSpanElement>(null);

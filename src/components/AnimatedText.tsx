@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface AnimatedTextProps {
   texts: string[];
@@ -7,12 +7,12 @@ interface AnimatedTextProps {
   pauseDuration?: number;
 }
 
-const AnimatedText: React.FC<AnimatedTextProps> = ({
+const AnimatedText = ({
   texts,
   typingSpeed = 100,
   deletingSpeed = 50,
   pauseDuration = 2000,
-}) => {
+}: AnimatedTextProps) => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
