@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedText from './AnimatedText';
@@ -25,7 +24,7 @@ const Hero = () => {
           <div className="mb-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4">
               Hi, I'm{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Saurabh Jain
               </span>
             </h1>
@@ -34,8 +33,8 @@ const Hero = () => {
                 texts={[
                   'Security Engineer',
                   'Penetration Tester',
-                  'Red Team Specialist',
-                  'Security Researcher'
+                  'Red Teamer',
+                  'Cloud Security'
                 ]}
               />
             </div>

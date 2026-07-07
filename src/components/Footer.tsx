@@ -1,4 +1,3 @@
-import React from 'react';
 import { Github, Linkedin, Twitter, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -11,7 +10,7 @@ const Footer = () => {
     },
     {
       name: 'GitHub',
-      url: 'https://github.com/jain6196',
+      url: 'https://github.com/saurabhj4in',
       icon: Github
     },
     {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
@@ -18,7 +18,6 @@ const Header = () => {
     { href: '#experience', label: 'Experience', isRoute: false },
     { href: '/blog', label: 'Blog', isRoute: true },
     { href: '/contact', label: 'Contact', isRoute: true },
-   /** { href: '/secured', label: 'Secured', isRoute: true }, */
   ];
 
   useEffect(() => {
@@ -68,7 +67,7 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  const isActiveLink = (item: any) => {
+  const isActiveLink = (item: { href: string; isRoute: boolean }) => {
     if (item.isRoute) {
       return location.pathname === item.href;
     } else {
