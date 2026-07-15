@@ -1,4 +1,4 @@
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, Mail, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedText from './AnimatedText';
 
@@ -44,7 +44,7 @@ const Hero = () => {
           A security engineer who thrives on finding flaws before attackers do, turning risk into resilience. I love designing defenses from the ground up and transforming vulnerabilities into hardened systems.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
             <button
               onClick={() => scrollToSection('#experience')}
               className="group inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
@@ -52,7 +52,7 @@ const Hero = () => {
               View Experience
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
-            
+
             <Link
               to="/contact"
               className="group inline-flex items-center px-8 py-4 bg-transparent border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
@@ -60,6 +60,17 @@ const Hero = () => {
               <Mail className="mr-2 h-5 w-5" />
               Get In Touch
             </Link>
+
+            <a
+              href="https://saurabhj4in.github.io/AWS-SAA-C03-Prep/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
+            >
+              <BookOpen className="h-5 w-5" />
+              AWS SAA-C03 Prep
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+            </a>
           </div>
 
           <div className="mt-12 flex justify-center">
