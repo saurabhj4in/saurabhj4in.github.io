@@ -11,6 +11,7 @@ import {
   GitBranch,
   ScanSearch,
   MailCheck,
+  BookOpen,
 } from 'lucide-react';
 
 const Experience = () => {
@@ -233,6 +234,23 @@ responsibilities: [
         ],
       },
     },
+    {
+      title: 'AWS SAA-C03 Prep',
+      link: 'https://github.com/saurabhj4in/AWS-SAA-C03-Prep',
+      siteLink: 'https://saurabhj4in.github.io/AWS-SAA-C03-Prep/',
+      icon: BookOpen,
+      category: 'Certification Prep',
+      tech: ['AWS', 'Cloud Security', 'SAA-C03'],
+      description: 'Structured study notes, service cheat-sheets, and practice scenarios for the AWS Solutions Architect Associate (SAA-C03) exam — organised by domain and hosted as a searchable site.',
+      terminal: {
+        cmd: 'open aws-saa-c03-prep/README.md',
+        lines: [
+          '[+] domains: IAM · EC2 · S3 · VPC · RDS',
+          '[+] 200+ notes · practice questions',
+          '[✓] site → saurabhj4in.github.io/AWS-SAA-C03-Prep',
+        ],
+      },
+    },
   ];
 
   const categoryStyles: Record<string, string> = {
@@ -240,6 +258,7 @@ responsibilities: [
     'Attack Surface': 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300',
     'Secrets Scanning': 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
     'Email Security': 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300',
+    'Certification Prep': 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300',
   };
 
 
@@ -416,10 +435,25 @@ responsibilities: [
                     ))}
                   </div>
 
-                  <div className="flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-200">
-                    <Github className="h-4 w-4 mr-2" />
-                    View on GitHub
-                    <ExternalLink className="h-3.5 w-3.5 ml-1.5 group-hover:translate-x-0.5 transition-transform duration-200" />
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <div className="flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-200">
+                      <Github className="h-4 w-4 mr-2" />
+                      View on GitHub
+                      <ExternalLink className="h-3.5 w-3.5 ml-1.5 group-hover:translate-x-0.5 transition-transform duration-200" />
+                    </div>
+                    {project.siteLink && (
+                      <a
+                        href={project.siteLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="flex items-center text-sm font-medium text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors duration-200"
+                      >
+                        <BookOpen className="h-4 w-4 mr-1.5" />
+                        View Site
+                        <ExternalLink className="h-3.5 w-3.5 ml-1.5" />
+                      </a>
+                    )}
                   </div>
                 </a>
               );
