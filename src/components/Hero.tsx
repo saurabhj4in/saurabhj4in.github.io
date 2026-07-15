@@ -59,12 +59,6 @@ const Hero = () => {
               className="group inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30"
               style={{ background: 'linear-gradient(135deg, #232F3E 0%, #1a2332 50%, #232F3E 100%)', color: '#FF9900', border: '1.5px solid #FF9900' }}
             >
-              {/* AWS logo */}
-              <svg className="h-5 w-auto flex-shrink-0" viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <text x="0" y="20" fontSize="22" fontWeight="900" fill="#FF9900" fontFamily="'Arial Black',Arial,sans-serif" letterSpacing="-1">aws</text>
-                <path d="M2 26 Q40 34 78 26" stroke="#FF9900" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
-                <polygon points="74,22 78,26 72,27" fill="#FF9900"/>
-              </svg>
               <span>AWS SAA-C03 Prep</span>
               <BookOpen className="h-4 w-4 opacity-75 group-hover:opacity-100 transition-opacity" />
             </a>
