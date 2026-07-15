@@ -1,5 +1,4 @@
-import { ArrowRight, Mail, BookOpen } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowDown, BookOpen } from 'lucide-react';
 import AnimatedText from './AnimatedText';
 
 const Hero = () => {
@@ -50,26 +49,18 @@ const Hero = () => {
               className="group inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               View Experience
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform duration-300" />
             </button>
-
-            <Link
-              to="/contact"
-              className="group inline-flex items-center px-8 py-4 bg-transparent border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <Mail className="mr-2 h-5 w-5" />
-              Get In Touch
-            </Link>
 
             <a
               href="https://saurabhj4in.github.io/AWS-SAA-C03-Prep/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
+              className="group inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30"
+              style={{ background: 'linear-gradient(135deg, #232F3E 0%, #1a2332 50%, #232F3E 100%)', color: '#FF9900', border: '1.5px solid #FF9900' }}
             >
-              <BookOpen className="h-5 w-5" />
-              AWS SAA-C03 Prep
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <span>AWS SAA-C03 Prep</span>
+              <BookOpen className="h-4 w-4 opacity-75 group-hover:opacity-100 transition-opacity" />
             </a>
           </div>
 
