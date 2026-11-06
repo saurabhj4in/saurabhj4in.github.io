@@ -12,10 +12,10 @@ const Header = () => {
 
   const navItems = [
     { href: '/', label: 'Home', isRoute: true },
-    { href: '/', label: 'About', isRoute: true },
+    { href: '#about', label: 'About', isRoute: false },
     { href: '#certifications', label: 'Certifications', isRoute: false },
     { href: '#skills', label: 'Skills', isRoute: false },
-    { href: '#experience', label: 'Experience', isRoute: false },
+    { href: '#experience', label: 'Journey', isRoute: false },
     { href: '/blog', label: 'Blog', isRoute: true },
     { href: '/contact', label: 'Contact', isRoute: true },
   ];

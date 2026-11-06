@@ -3,13 +3,9 @@ import {
   Calendar,
   MapPin,
   ExternalLink,
-  Radar,
-  Terminal,
-  Network,
-  Activity,
+  Package,
   Github,
   GitBranch,
-  ScanSearch,
   MailCheck,
   BookOpen,
 } from 'lucide-react';
@@ -107,66 +103,18 @@ responsibilities: [
 
   const projects = [
     {
-      title: 'ReconX',
-      link: 'https://github.com/saurabhj4in/ReconX',
-      icon: Radar,
-      category: 'Recon',
-      tech: ['Python', 'Bash'],
-      description: 'End-to-end recon framework that chains subdomain enumeration, live-host probing, port scanning, and JS analysis into a single command — turning hours of manual recon into one structured run.',
+      title: 'DockProber',
+      link: 'https://github.com/saurabhj4in/DockProber',
+      icon: Package,
+      category: 'Container Security',
+      tech: ['Python', 'Docker'],
+      description: 'Probes Docker environments to surface container misconfigurations, exposed ports, and insecure defaults before attackers find them.',
       terminal: {
-        cmd: 'reconx -d example.com',
+        cmd: 'dockprober --target localhost',
         lines: [
-          '[+] enumerating subdomains…',
-          '[+] 631 found · probing live hosts…',
-          '[✓] 214 live · 18 open ports · 42 js files',
-        ],
-      },
-    },
-    {
-      title: 'reconx-cli',
-      link: 'https://github.com/saurabhj4in/reconx-cli',
-      icon: Terminal,
-      category: 'Recon',
-      tech: ['Python', 'CLI'],
-      description: 'Terminal-first interface for ReconX with configurable flags and output formats, built for fast recon runs across bug-bounty and pentest workflows.',
-      terminal: {
-        cmd: 'reconx-cli -t target.com -o json',
-        lines: [
-          '[*] loading modules · 6 enabled',
-          '[+] scanning… output → results.json',
-          '[✓] done in 48s · 0 errors',
-        ],
-      },
-    },
-    {
-      title: 'SubEnumerator',
-      link: 'https://github.com/saurabhj4in/SubEnumerator',
-      icon: Network,
-      category: 'Attack Surface',
-      tech: ['Python'],
-      description: 'Aggregates subdomains from multiple passive and active sources, deduplicates the results, and exports a clean list ready for downstream recon tooling.',
-      terminal: {
-        cmd: 'subenum -d target.com',
-        lines: [
-          '[+] querying 7 sources…',
-          '[+] merging · deduplicating…',
-          '[✓] 512 unique subdomains → subs.txt',
-        ],
-      },
-    },
-    {
-      title: 'Sub-Prober',
-      link: 'https://github.com/saurabhj4in/Sub-Prober',
-      icon: Activity,
-      category: 'Attack Surface',
-      tech: ['Python', 'Excel'],
-      description: 'Probes subdomains for liveness, captures HTTP status codes and detected technologies, and exports straight to Excel for VAPT and bug-bounty pipelines.',
-      terminal: {
-        cmd: 'subprober -l subs.txt',
-        lines: [
-          '[+] probing 512 hosts…',
-          '[+] 200:187  301:44  403:29',
-          '[✓] exported → results.xlsx',
+          '[+] scanning 12 running containers…',
+          '[!] 2 containers running as root',
+          '[✓] report → dockprober-report.json',
         ],
       },
     },
@@ -176,7 +124,7 @@ responsibilities: [
       icon: Github,
       category: 'Recon',
       tech: ['Python', 'GitHub API'],
-      description: 'Maps the external attack surface of GitHub orgs and users — surfacing exposed repos, sensitive file patterns, and metadata useful during recon.',
+      description: 'Single-command CLI that connects to GitHub, auto-discovers every org you belong to, and runs 9 security checks across members, repos, and stale branches in one run.',
       terminal: {
         cmd: 'gitrecon --org acme',
         lines: [
@@ -199,22 +147,6 @@ responsibilities: [
           '[+] walking 1,204 commits…',
           '[!] aws_key @ a3f9c2 · token @ 7b1e0d',
           '[✓] 2 secrets flagged',
-        ],
-      },
-    },
-    {
-      title: 'TruffleHog-Simplifier',
-      link: 'https://github.com/saurabhj4in/TruffleHog-Simplifier',
-      icon: ScanSearch,
-      category: 'Secrets Scanning',
-      tech: ['Python', 'GitHub Actions'],
-      description: 'A TruffleHog wrapper that makes secret scanning CI-ready — cleaner output, simpler config, and drop-in GitHub Actions integration.',
-      terminal: {
-        cmd: 'th-simplify scan --ci',
-        lines: [
-          '[+] running trufflehog…',
-          '[+] 3 verified · 5 unverified',
-          '[✓] SARIF → results.sarif',
         ],
       },
     },
@@ -254,8 +186,8 @@ responsibilities: [
   ];
 
   const categoryStyles: Record<string, string> = {
+    'Container Security': 'bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300',
     'Recon': 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
-    'Attack Surface': 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300',
     'Secrets Scanning': 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
     'Email Security': 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300',
     'Certification Prep': 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300',
@@ -269,7 +201,7 @@ responsibilities: [
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            My Journey
+            Experience
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
 
