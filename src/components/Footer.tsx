@@ -80,10 +80,16 @@ const Footer = () => {
                 Skills
               </button>
               <button
+                onClick={() => scrollToSection('certifications')}
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-left"
+              >
+                Certifications
+              </button>
+              <button
                 onClick={() => scrollToSection('experience')}
                 className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-left"
               >
-                Experience
+                Journey
               </button>
               <Link
                 to="/contact"
@@ -136,7 +142,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Saurabh Jain. All rights reserved.
+              © 2026 Saurabh Jain. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-2 md:mt-0">
               Built with React & Tailwind CSS

@@ -74,6 +74,20 @@ const About = () => {
                 ))}
               </div>
             </div>
+
+            <div className="pt-4">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
+                GitHub Activity
+              </p>
+              <a href="https://github.com/saurabhj4in" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://github-readme-stats.vercel.app/api?username=saurabhj4in&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=3B82F6&icon_color=3B82F6&text_color=6B7280&hide_title=true"
+                  alt="Saurabh's GitHub stats"
+                  className="rounded-lg w-full"
+                  loading="lazy"
+                />
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-6">
